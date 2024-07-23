@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Systeam</title>
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/style.css">
+
+</head>
+<body >
+    <div class="background text-white">
+    <div class="w-50 mx-auto py-5">
+        <h1>Ur Dream Car system</h1>
+        <div class="form-group mb-3">
+            
+            <label for="ModelName " class="mb-3 fw-bolder fs-5">ModelName:</label> 
+            <input type="text" id="ModelName" onkeyup="validateModelName()" class=" form-control">
+            <p class="text-danger d-none" id="name-validation">please check your input (suppose to start with capital )</p>
+
+        </div>
+        <div class="form-group mb-3">
+            <label for="CarPrice" class="mb-3 fw-bolder fs-5">CarPrice</label>
+            <input type="number" id="CarPrice"  onkeyup="validtionCarPrice()" class=" form-control">
+            <p class="text-danger d-none" id="errorPrice">please check your input (suppose to enter minmium 4 digit )</p>
+
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="CarColor" class="mb-3 fw-bolder fs-5" >CarColor</label>
+           <select id="CarColor" class="form-control" >
+            <option selected>Choose...</option>
+            <option >Black</option>
+            <option >White</option>
+            <option >Red</option>
+            <option >Blue</option>
+            <option >Gray</option>
+            <option >Brown</option>
+            <option >green</option>
+            <option >yellow</option>
+           </select>
+        </div>
+        <div class="form-group mb-3">
+            <label for="inputUrl" class="form-label b-3 fw-bolder fs-5">Url</label>
+            <input type="url" class="form-control" id="inputUrl" placeholder="https://">
+        </div>
+       
+        <button type="submit" id="mainBtn" onclick="addProduct()" class=" btn btn-outline-light" >AddProduct</button>
+
+    </div>
+
+    <div class="w-50 mx-auto mb-5">
+      <label for="Search">Search</label>
+      <input type="search" id="Search" oninput="search(this.value)" class="form-control">
+    </div>
+<div class="w-50 mx-auto">
+    <table class="table">
+        <thead>
+            <th>index</th>
+            <th>ModelName</th>
+            <th>CarPrice</th>
+            <th>CarColor</th>
+            <th>Vist</th>
+            <th>Edit</th>
+            <th>Delete</th>
+
+        </thead>
+        <tbody id="Tbody">
+           
+        </tbody>
+    </table>
+</div>
+</div>
+    <script src="Js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
